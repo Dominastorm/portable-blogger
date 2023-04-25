@@ -6,5 +6,4 @@ COPY . /app
 ENV PORT 5001
 ENV PYTHONUNBUFFERED=1
 EXPOSE 5001
-# ENTRYPOINT [ "python" ]
 CMD ["python","-u","app/app.py"]

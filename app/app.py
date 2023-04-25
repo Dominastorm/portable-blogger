@@ -10,7 +10,6 @@ password = 'password'       # password as set for the mongodb admin server (the 
 host = 'mongodb-service'    # service name of the mongodb admin server as set in the service for mongodb server
 port = '27017'              # port number of the mongodb admin server as set in the service for mongodb server
 conn_string = f'mongodb://{user}:{password}@{host}:{port}'
-#conn_string = 'mongodb://admin:149161183@mongodb-service:27017'
 
 db = MongoClient(conn_string).blog
 
@@ -69,7 +68,6 @@ def deletePost():
 
     # redirect to home page
     return redirect("/")
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5001", debug=True)
